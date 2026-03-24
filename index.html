@@ -200,7 +200,7 @@
       <p class="subtitle">Inteligência que ganha forma 💙</p>
 
       <div class="links">
-        <a class="btn" href="https://www.instagram.com/criativament3d/" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.instagram.com/criativament3d/" target="_blank" rel="noopener noreferrer"  onclick="trackClick('Instagram')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <defs>
@@ -220,7 +220,7 @@
           <span>Instagram</span>
         </a>
 
-        <a class="btn" href="https://www.facebook.com/profile.php?id=61588398184614" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.facebook.com/profile.php?id=61588398184614" target="_blank" rel="noopener noreferrer" onclick="trackClick('Facebook')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="11" fill="#1877F2"/>
@@ -230,7 +230,7 @@
           <span>Facebook</span>
         </a>
 
-        <a class="btn" href="https://www.tiktok.com/@criativament" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.tiktok.com/@criativament" target="_blank" rel="noopener noreferrer" onclick="trackClick('TikTok')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M14.5 3c.4 1.4 1.5 2.7 3 3.2v2.2c-1-.1-2-.4-3-.9v5.6c0 3-2.2 5.2-5.2 5.2S4 16.1 4 13.1s2.2-5.2 5.2-5.2c.2 0 .5 0 .7.1v2.4c-.2-.1-.5-.1-.7-.1-1.6 0-2.8 1.2-2.8 2.8S7.6 16 9.2 16s2.8-1.2 2.8-3V3h2.5z" fill="#25F4EE"/>
@@ -241,7 +241,7 @@
           <span>TikTok</span>
         </a>
 
-        <a class="btn" href="https://www.threads.com/@criativament3d?xmt=AQF0Rpqs6cRa7a2ofPGkXqXX4eynwJ5Xp7RScbpbQYK0Ug0" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://www.threads.com/@criativament3d?xmt=AQF0Rpqs6cRa7a2ofPGkXqXX4eynwJ5Xp7RScbpbQYK0Ug0" target="_blank" rel="noopener noreferrer" onclick="trackClick('Threads')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="11" fill="#111"/>
@@ -251,7 +251,7 @@
           <span>Threads</span>
         </a>
 
-        <a class="btn" href="https://shopee.com.br/criativament3d?categoryId=100636&entryPoint=ShopByPDP&itemId=58257358585&upstream=cart" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://shopee.com.br/criativament3d?categoryId=100636&entryPoint=ShopByPDP&itemId=58257358585&upstream=cart" target="_blank" rel="noopener noreferrer" onclick="trackClick('Shopee')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 8h14l-1 10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 8z" fill="#EE4D2D"/>
@@ -262,7 +262,7 @@
           <span>Shopee</span>
         </a>
 
-        <a class="btn" href="https://lista.mercadolivre.com.br/_CustId_3223459356?item_id=MLB6495612646&category_id=MLB186818&seller_id=3223459356&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://lista.mercadolivre.com.br/_CustId_3223459356?item_id=MLB6495612646&category_id=MLB186818&seller_id=3223459356&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" rel="noopener noreferrer" onclick="trackClick('Mercado Livre')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <ellipse cx="12" cy="12" rx="11" ry="7.5" fill="#FFE600"/>
@@ -273,7 +273,7 @@
           <span>Mercado Livre</span>
         </a>
 
-        <a class="btn" href="https://wa.me/5518991665311?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20produtos%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
+        <a class="btn" href="https://wa.me/5518991665311?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20seus%20produtos%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" onclick="trackClick('WhatsApp')">
           <span class="icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="11" fill="#25D366"/>
@@ -290,5 +290,13 @@
       </div>
     </section>
   </main>
+  <script>
+  function trackClick(destino) {
+    gtag('event', 'clique_link', {
+      link_name: destino,
+      page_location: window.location.href
+    });
+  }
+</script>
 </body>
 </html>
